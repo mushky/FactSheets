@@ -1,0 +1,10 @@
+<h1><%= @syrianote.title %></h1>
+<p><%= @syrianote.category %></p>
+<p><%= @syrianote.url %></p>
+<p><%= @syrianote.publisher %></p>
+<p><%= @syrianote.description %></p>
+<p><%= @syrianote.tags %></p>
+
+|<%= link_to 'Back', syrianotes_path %>|
+|<%= link_to 'Edit', edit_syrianote_path(@syrianote) %>|
+|<%= link_to 'Delete', syrianote_path(@syrianote), method: :delete, data: { confirm: "Are You Sure?" } %>|

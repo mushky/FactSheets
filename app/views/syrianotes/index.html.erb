@@ -1,0 +1,22 @@
+<h1>Syria Articles</h1>
+<p>Articles and Posts on Syria</p>
+<table class="table table-striped">
+<% @syrianotes.each do |syrianote| %>
+	<td>	
+		<strong>Category:</strong><br><%= syrianote.category %><br>
+		<strong>Title:</strong><br><%= syrianote.title %><br>
+		<strong>URL:<br><a href="<%= syrianote.url %>">LINK TO ARTICLE</a></strong><br>
+		<strong>Publisher:</strong><br><%= syrianote.publisher %><br>
+		<strong>Description:</strong><br><%= syrianote.description %><br>
+		<strong>Tags:</strong><br><%= syrianote.tags %><br>
+		<br>
+	|<%= link_to 'Show', syrianote_path(syrianote) %>| 
+	|<%= link_to 'Edit', syrianote_path(syrianote) %>|
+	|<%= link_to 'Delete', syrianote_path(syrianote), method: :delete, data: { confirm: "Are you sure?" } %>|
+</td>
+<% end %>
+</table>
+<br>
+<%= link_to "New Article", new_syrianote_path, class: "btn btn-primary" %>	
+
+<%= will_paginate @syrianotes %>

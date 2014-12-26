@@ -1,0 +1,35 @@
+<%= form_for @syrianote do |f| %>
+	<p>
+		<%= f.label :category %><br>
+		<%= f.text_field :category %>
+	</p>
+
+	<p>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	</p>
+
+	<p>
+		<%= f.label :url %><br>
+		<%= f.url_field :url %>
+	</p>
+
+	<p>
+		<%= f.label :publisher %><br>
+		<%= f.text_field :publisher %>
+	</p>
+
+	<p>
+		<%= f.label :description %><br>
+		<%= f.text_field :description %>
+	</p>
+
+	<p>
+		<%= f.label :tags %><br>
+		<%= f.text_field :tags %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
