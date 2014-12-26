@@ -1,35 +1,48 @@
-<%= form_for @syrianote do |f| %>
-	<p>
-		<%= f.label :category %><br>
-		<%= f.text_field :category %>
-	</p>
+<%= form_for(@syrianote, html: {class: "form-horizontal"}) do |f| %>
+	<% if @syrianote.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@syrianote.errors.count, "error") %> Prohibited this post from being saved:</h2>
+			<ul>
+			<% @syrianote.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<div class="col-sm-6">
+		<p>
+			<%= f.label :category %><br>
+				<%= f.select(:category, options_for_select([['Casualties', 1], ['U.S and Western Assistance to Rebels', 2],
+				['U.S Assistance to Pro-Rebel Propaganda', 3], ['Israeli Colloboration with Opposition', 4], ['Turkeys Role', 5], ['Origins of Armed Insurgency', 6], ['Rebel Human Rights Abuses:', 7], ['U.S Assistance to Al-Qaeda', 8]]), { class: "btn btn-default dropdown-toggle" }) %>
+		</p>
 
-	<p>
-		<%= f.label :title %><br>
-		<%= f.text_field :title %>
-	</p>
+		<p>
+			<%= f.label :title %><br>
+			<%= f.text_field :title, class: "form-control" %>
+		</p>
 
-	<p>
-		<%= f.label :url %><br>
-		<%= f.url_field :url %>
-	</p>
+		<p>
+			<%= f.label :url %><br>
+			<%= f.url_field :url, class: "form-control" %>
+		</p>
 
-	<p>
-		<%= f.label :publisher %><br>
-		<%= f.text_field :publisher %>
-	</p>
+		<p>
+			<%= f.label :publisher %><br>
+			<%= f.text_field :publisher, class: "form-control" %>
+		</p>
 
-	<p>
-		<%= f.label :description %><br>
-		<%= f.text_field :description %>
-	</p>
+		<p>
+			<%= f.label :description %><br>
+			<%= f.text_field :description, class: "form-control" %>
+		</p>
 
-	<p>
-		<%= f.label :tags %><br>
-		<%= f.text_field :tags %>
-	</p>
-
-	<p>
-		<%= f.submit %>
-	</p>
+		<p>
+			<%= f.label :tags %><br>
+			<%= f.text_field :tags, class: "form-control" %>
+		</p>
+			
+		<p>
+			<%= f.submit class: "btn btn-danger" %>
+		</p>
+	</div>
 <% end %>

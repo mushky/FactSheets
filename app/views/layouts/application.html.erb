@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FactSheet</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+<title>FactSheet</title>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
 </head>
-  <body>
-    <div id="main-container" class="container">
-      <div class="row">
-        <div id="sidebar" class="col-xs-2">
-         	<ul>
-          	<li><%= link_to 'Home', root_path %></li>
-          	<li><%= link_to 'Syria', syrianotes_path %></li>
-          </ul>
-        </div>
-        <div id="content" class="col-xs-10">
-          <%= yield %>
-        </div>
+<body>
+  <%= render 'shared/navigation' %>
+  <div id="main-container" class="container">
+    <div class="row">
+      <div id="sidebar" class="col-xs-2">
+       	<ul>
+        	<li><%= link_to 'Home', root_path %></li>
+        	<li><%= link_to 'Syria', syrianotes_path %></li>
+        </ul>
+      </div>
+      <div id="content" class="col-xs-10">
+      <%= yield %>
+      <br>
       </div>
     </div>
-  </body>
+    <%= render 'shared/footer' %>  
+  </div>
+</body>
 </html>

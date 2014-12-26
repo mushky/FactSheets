@@ -35,6 +35,10 @@ class SyrianotesController < ApplicationController
 
   def delete
     @syriatenote = Syrianote.find(params[:id])
+  end
+
+  def destroy
+    @syrianote = Syrianote.find(params[:id])
     @syrianote.destroy
 
     redirect_to syriatenotes_path
