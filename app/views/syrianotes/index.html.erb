@@ -1,5 +1,6 @@
 <h1>Syria Articles</h1>
 <p>Articles and Posts on Syria</p>
+
 <%= link_to "New Article", new_syrianote_path, class: "btn-sm btn-success" %>
 <div id="spacer">	
 <% @syrianotes.each do |syrianote| %>
@@ -20,4 +21,3 @@
 	</div>
 <% end %>
 
-<%= will_paginate @syrianotes %>
