@@ -1,23 +1,32 @@
-<h1>Syria Articles</h1>
-<p>Articles and Posts on Syria</p>
-
-<%= link_to "New Article", new_syrianote_path, class: "btn-sm btn-success" %>
-<div id="spacer">	
-<% @syrianotes.each do |syrianote| %>
-	<div class="jumbotron">
-		<div class="container">
-			<div id="note">
-				<strong>Category:</strong><br><%= syrianote.category %><br>
-				<strong>Title:</strong><br><%= syrianote.title %><br>
-				<strong>URL:<br><a href="<%= syrianote.url %>">LINK TO ARTICLE</a></strong><br>
-				<strong>Publisher:</strong><br><%= syrianote.publisher %><br>
-				<strong>Description:</strong><br><%= syrianote.description %><br>
-				<strong>Tags:</strong><br><%= syrianote.tags %><br>
-				|<%= link_to 'Show', syrianote_path(syrianote), class: "btn-sm btn-info" %>| 
-				|<%= link_to 'Edit', syrianote_path(syrianote), class: "btn-sm btn-warning" %>|
-				|<%= link_to 'Delete', syrianote_path(syrianote), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
-			</div>		
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6">
+			<h1>Syria Articles</h1>
+			<p><em>Articles and Posts on Syria</em></p>
+		</div>
+		<div class="col-xs-6">
+			<%= render 'shared/navigation' %>
 		</div>
 	</div>
-<% end %>
+</div>
+
+<div class="container">
+	<% @syrianotes.each do |syrianote| %>
+		<div class="jumbotron">
+			<div class="container">
+				<div id="note">
+					<strong>Category:</strong><br><%= syrianote.category %><br>
+					<strong>Title:</strong><br><%= syrianote.title %><br>
+					<strong>URL:<br><a href="<%= syrianote.url %>">LINK TO ARTICLE</a></strong><br>
+					<strong>Publisher:</strong><br><%= syrianote.publisher %><br>
+					<strong>Description:</strong><br><%= syrianote.description %><br>
+					<strong>Tags:</strong><br><%= syrianote.tags %><br>
+					|<%= link_to 'Show', syrianote_path(syrianote), class: "btn-sm btn-info" %>| 
+					|<%= link_to 'Edit', syrianote_path(syrianote), class: "btn-sm btn-warning" %>|
+					|<%= link_to 'Delete', syrianote_path(syrianote), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
+				</div>		
+			</div>
+		</div>
+	<% end %>
+</div>
 

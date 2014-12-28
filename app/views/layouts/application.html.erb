@@ -7,21 +7,14 @@
 <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'shared/navigation' %>
   <div id="main-container" class="container">
     <div class="row">
-      <div id="sidebar" class="col-xs-2">
-       	<ul>
-        	<li><%= link_to 'Home', root_path %></li>
-        	<li><%= link_to 'Syria', syrianotes_path %></li>
-        </ul>
       </div>
-      <div id="content" class="col-xs-10">
+      <div id="content" class="col-xs-12">
       <%= yield %>
-      <br>
       </div>
     </div>
-    <%= render 'shared/footer' %>  
   </div>
 </body>
+<%= render 'shared/footer' %>  
 </html>

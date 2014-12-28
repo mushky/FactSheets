@@ -1,15 +1,19 @@
 <div class="container">
   <div class="row">
   	<div id="navbar" class="col-xs-12">
-			<form class="navbar-form navbar-right" role="search">
+			<form class="navbar-form navbar-left" role="search">
   		<div class="form-group">
     	<%= form_tag(syrianotes_path, :method => "get", class: "navbar-form navbar-right") do %>
   			<%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
   			<%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
+                <%= link_to "New Article", new_syrianote_path, class: "btn-sm btn-success" %>
 			<% end %>
+      <ul class="nav nav-tabs">
+        <li role="presentation"><%= link_to 'Home', root_path, class: "active" %></li>
+        <li role="presentation"><%= link_to 'Syria', syrianotes_path, class: "active" %></li>
+      </ul>
 		</form>
 	</div>
 </div>	
-
 
 
