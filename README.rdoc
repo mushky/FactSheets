@@ -5,5 +5,5 @@ ToDo:
 - Improve Search Functionality.
 - Add Users to Application
 - Add ability to add personalized Fact Sheets
---Ability to select individual facts
+- Ability to select individual facts
 - Ability to export to selected facts to .csv file
