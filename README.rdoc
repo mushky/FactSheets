@@ -1,6 +1,6 @@
 == README
 
-ToDo:
+Todo:
 
 - Improve Search Functionality.
 - Add Users to Application
