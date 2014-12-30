@@ -45,7 +45,7 @@ class SyrianotesController < ApplicationController
     @syrianote = Syrianote.find(params[:id])
     @syrianote.destroy
 
-    redirect_to syriatenotes_path
+    redirect_to syriaenotes_path
   end
 
   private
