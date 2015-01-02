@@ -6,7 +6,6 @@
     	<%= form_tag(syrianotes_path, :method => "get", class: "navbar-form navbar-right") do %>
   			<%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
   			<%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
-                <%= link_to "New Article", new_syrianote_path, class: "btn-sm btn-success" %>
 			<% end %>
       <ul class="nav nav-tabs">
         <li role="presentation"><%= link_to 'Home', root_path, class: "active" %></li>
