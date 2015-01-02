@@ -1,11 +1,23 @@
 <div class="container">
-	<div class="jumbotron">
-		<h1>Welcome to Fact Sheets</h1>
-
-		<p><em>A collection of news articles challenging conventional wisdom</em></p>
-
-		<%= link_to 'Syria FactSheet', syrianotes_path, class: "btn btn-default" %>
+	<div class="row">
+		<div class="col-xs-6">
+			<h1>Fact Sheets</h1>
+			<p><em>A place to easily collect and document information</em></p>
+		</div>
+		<div class="col-xs-6">
+			<%= render 'shared/navigation' %>
+		</div>
 	</div>
 </div>
+
+<div class="container">
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Welcome to Fact Sheets</h1>
+			<p><em>A collection of news articles challenging conventional wisdom</em></p>
+			<%= link_to 'Syria FactSheet', syrianotes_path, class: "btn btn-default" %>
+		</div><!-- /jumbotron -->
+	</div><!-- /container -->
+</div><!-- /container -->
 <div class="spacer">
 
