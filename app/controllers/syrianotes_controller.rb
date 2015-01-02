@@ -1,4 +1,6 @@
 class SyrianotesController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     if params[:search]
       @syrianotes = Syrianote.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
