@@ -2,8 +2,8 @@
 
 Todo:
 
-- Improve Search Functionality.
-- Add Users to Application
+- Add Search Functionality [Done]
+- Add Users to Application [Done]
 - Add ability to add personalized Fact Sheets
 - Ability to select individual facts
 - Ability to export to selected facts to .csv file
