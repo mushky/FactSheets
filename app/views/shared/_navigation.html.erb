@@ -7,9 +7,14 @@
   			<%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
   			<%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
 			<% end %>
-      <ul class="nav nav-tabs">
+      <ul class="nav nav-tabs">        
         <li role="presentation"><%= link_to 'Home', root_path, class: "active" %></li>
         <li role="presentation"><%= link_to 'Syria', syrianotes_path, class: "active" %></li>
+        <% if user_signed_in? %> 
+          <li><%= link_to 'Sign out', destroy_user_session_path, class: "btn-sm btn-danger" ,method: :delete %></li>
+        <% else current_user %>
+          <li><%= link_to 'Sign in', new_user_session_path, class: "btn-sm btn-info" %></li>
+        <% end %>
       </ul>
 		</form>
 	</div>

@@ -4,6 +4,7 @@ Todo:
 
 - Add Search Functionality [Done]
 - Add Users to Application [Done]
+- Fixed Option Select Display Issue [Done]
 - Add ability to add personalized Fact Sheets
 - Ability to select individual facts
 - Ability to export to selected facts to .csv file

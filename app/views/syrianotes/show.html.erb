@@ -1,10 +1,24 @@
-<h1><%= @syrianote.title %></h1>
-<p><%= @syrianote.category %></p>
-<p><%= @syrianote.url %></p>
-<p><%= @syrianote.publisher %></p>
-<p><%= @syrianote.description %></p>
-<p><%= @syrianote.tags %></p>
+<div class="container" id="container-main">
+	<div class="container" id="container-jumbotron">
+		<div class="jumbotron">
+			<h2><%= @syrianote.title.capitalize %></h2>
+			<p><strong>Category:</strong><br>
+			<%= @syrianote.category %></p>
 
-|<%= link_to 'Back', syrianotes_path %>|
-|<%= link_to 'Edit', edit_syrianote_path(@syrianote) %>|
-|<%= link_to 'Delete', syrianote_path(@syrianote), method: :delete, data: { confirm: "Are You Sure?" } %>|
+			<p><strong>URL:</strong><br>
+			<a href="<%= @syrianote.url %>"><%= @syrianote.url %></a></p>
+			
+			<p><strong>Publisher:</strong><br>
+			<%= @syrianote.publisher %></p>
+			
+			<p><strong>Description:</strong><br>
+			<%= @syrianote.description %></p>
+			<p><strong>Tags:</strong><br>
+			<%= @syrianote.tags %></p>
+
+			|<%= link_to 'Back', syrianotes_path, class: "btn-sm btn-info" %>|
+			|<%= link_to 'Edit', edit_syrianote_path(@syrianote), class: "btn-sm btn-warning" %>|
+			|<%= link_to 'Delete', syrianote_path(@syrianote), method: :delete, data: { confirm: "Are You Sure?" }, class: "btn-sm btn-danger" %>|
+		</div><!-- /jumbotron -->
+	</div><!-- /container jumbotron -->
+</div><!-- /container main -->
