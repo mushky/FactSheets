@@ -1,23 +1,24 @@
 <div class="container">
-  <div class="row">
-  	<div id="navbar" class="col-xs-12">
-			<form class="navbar-form navbar-left" role="search">
+  <div id="navbar" class="col-xs-12">
+		<form class="navbar-form navbar-right" role="search">
   		<div class="form-group">
-    	<%= form_tag(syrianotes_path, :method => "get", class: "navbar-form navbar-right") do %>
-  			<%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
-  			<%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
-			<% end %>
-      <ul class="nav nav-tabs">        
-        <li role="presentation"><%= link_to 'Home', root_path, class: "active" %></li>
-        <li role="presentation"><%= link_to 'Syria', syrianotes_path, class: "active" %></li>
-        <% if user_signed_in? %> 
-          <li><%= link_to 'Sign out', destroy_user_session_path, class: "btn-sm btn-danger" ,method: :delete %></li>
-        <% else current_user %>
-          <li><%= link_to 'Sign in', new_user_session_path, class: "btn-sm btn-info" %></li>
-        <% end %>
-      </ul>
-		</form>
-	</div>
-</div>	
+        <ul class="nav nav-tabs">    
+    	    <li><%= form_tag(syrianotes_path, :method => "get", class: "navbar-form navbar-right") do %>
+  			      <%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
+  			      <%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
+			      <% end %>
+            </li>
+          <li role="presentation"><%= link_to 'Home', root_path, class: "active" %></li>
+          <li role="presentation"><%= link_to 'Syria', syrianotes_path, class: "active" %></li>
+          <% if user_signed_in? %> 
+            <li><%= link_to 'Sign out', destroy_user_session_path, class: "btn-sm btn-danger" ,method: :delete %></li>
+          <% else current_user %>
+            <li><%= link_to 'Sign in', new_user_session_path, class: "btn-sm btn-info" %></li>
+          <% end %>
+        </ul>
+		  </form>
+	  </div>
+  </div>	
+</div>
 
 
