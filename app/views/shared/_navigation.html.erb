@@ -1,13 +1,15 @@
-<div class="container">
-  <div id="navbar" class="col-xs-12">
+<div class="container-fluid">
+  <div id="navbar">
 		<form class="navbar-form navbar-right" role="search">
+      <%= link_to "New Post", new_syrianote_path, class: 'btn btn-primary' %>
   		<div class="form-group">
         <ul class="nav nav-tabs">    
-    	    <li><%= form_tag(syrianotes_path, :method => "get", class: "navbar-form navbar-right") do %>
+    	    <li>
+            <%= form_tag(syrianotes_path, :method => "get", class: "navbar-form navbar-right") do %>
   			      <%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
   			      <%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
 			      <% end %>
-            </li>
+          </li>
           <li role="presentation"><%= link_to 'Home', root_path, class: "active" %></li>
           <li role="presentation"><%= link_to 'Syria', syrianotes_path, class: "active" %></li>
           <% if user_signed_in? %> 
