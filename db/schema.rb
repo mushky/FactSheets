@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150102223522) do
+ActiveRecord::Schema.define(version: 20150105064458) do
+
+  create_table "iraqnotes", force: true do |t|
+    t.string   "category"
+    t.string   "title"
+    t.string   "url"
+    t.string   "publisher"
+    t.text     "description"
+    t.string   "tags"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "syrianotes", force: true do |t|
     t.string   "category"

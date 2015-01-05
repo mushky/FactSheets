@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'iraqnotes/index'
+
+  get 'iraqnotes/show'
+
+  get 'iraqnotes/new'
+
+  get 'iraqnotes/edit'
+
+  get 'iraqnotes/destroy'
+
   devise_for :users
   resources :syrianotes
   root 'welcome#index'

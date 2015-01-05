@@ -1,0 +1,2 @@
+module IraqnotesHelper
+end
