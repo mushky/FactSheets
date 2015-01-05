@@ -2,7 +2,11 @@ class IraqnotesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @iraqnotes = Iraqnote.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 7)
+    if params[:search]
+      @iraqnotes = Iraqnote.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
+    else
+      @iraqnotes = Iraqnote.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 7)
+    end
   end
 
   def show
