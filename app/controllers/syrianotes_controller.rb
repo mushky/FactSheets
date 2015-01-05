@@ -5,7 +5,7 @@ class SyrianotesController < ApplicationController
     if params[:search]
       @syrianotes = Syrianote.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
     else
-      @syrianotes = Syrianote.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
+      @syrianotes = Syrianote.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 7)
     end
   end
 
