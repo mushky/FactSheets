@@ -1,2 +1,24 @@
-<h1>Iraqnotes#index</h1>
-<p>Find me in app/views/iraqnotes/index.html.erb</p>
+<div class="container">
+	<%= link_to 'New Post', new_iraqnote_path, class: "btn btn-primary" %>
+	<%= will_paginate @iraqnote %>
+</div>
+<div class="container">
+	<% @iraqnotes.each do |iraqnote| %>
+		<div class="jumbotron">
+			<div class="container">
+				<div id="note">
+					<strong>Category:</strong><%= iraqnote.category %><br>
+					<strong>Title:</strong><%= iraqnote.title %><br>
+					<strong>URL:</strong><a href="<%= iraqnote.url %>">LINK TO ARTICLE</a><br>
+					<strong>Publisher:</strong><%= iraqnote.publisher %><br>
+					<strong>Description:</strong><%= iraqnote.description %><br>
+					<strong>Tags:</strong><%= iraqnote.tags %><br>
+					|<%= link_to 'Show', iraqnote_path(iraqnote), class: 'btn-sm btn-info' %>|
+					|<%= link_to 'Edit', iraqnote_path(iraqnote), class: 'btn-sm btn-warning' %>|
+					|<%= link_to 'Delete', iraqnote_path(iraqnote), class: 'btn-sm btn-danger', method: :delete, data: {confirm: "Are you sure?" } %>|
+				</div>
+			</div>
+		</div>
+	<% end %>
+	<%= will_paginate @iraqnote %>
+</div>

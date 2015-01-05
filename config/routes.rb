@@ -1,16 +1,6 @@
 Rails.application.routes.draw do
-  get 'iraqnotes/index'
-
-  get 'iraqnotes/show'
-
-  get 'iraqnotes/new'
-
-  get 'iraqnotes/edit'
-
-  get 'iraqnotes/destroy'
-
   devise_for :users
-  resources :syrianotes
+  resources :syrianotes, :iraqnotes
   root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

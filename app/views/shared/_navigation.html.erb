@@ -2,8 +2,7 @@
   <div id="navbar">
 		<form class="navbar-form navbar-right" role="search">
   		<div class="form-group">
-        <ul class="nav nav-tabs">
-          <li><%= link_to "New Post", new_syrianote_path, class: 'btn-sm btn-primary' %></li>    
+        <ul class="nav nav-tabs">    
     	    <li>
             <%= form_tag(syrianotes_path, :method => "get", class: "navbar-form navbar-right") do %>
   			      <%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
@@ -12,6 +11,7 @@
           </li>
           <li role="presentation"><%= link_to 'Home', root_path, class: "active" %></li>
           <li role="presentation"><%= link_to 'Syria', syrianotes_path, class: "active" %></li>
+          <li role="presentation"><%= link_to 'Iraq', iraqnotes_path, class: "active" %></li>
           <% if user_signed_in? %> 
             <li><%= link_to 'Sign out', destroy_user_session_path, class: "btn-sm btn-danger", method: :delete %></li>
           <% else current_user %>

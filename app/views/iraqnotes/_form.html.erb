@@ -1,0 +1,47 @@
+<%= form_for(@iraqnote, html: {class: "form-horizontal" }) do |f| %>
+	<% if @iraqnote.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@iraqnote.errors.count, "error") %> Prohibited this post from being saved:</h2>
+			<ul>
+				<% @iraqnote.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<div class="col-sm-6">
+		<p>
+			<%= f.label :category %><br>
+			<%= f.text_field :category, class: "form-control" %>
+		</p>
+
+		<p>
+			<%= f.label :title %><br>
+			<%= f.text_field :title, class: "form-control" %>
+		</p>
+
+		<p>
+			<%= f.label :url %><br>
+			<%= f.text_field :url, class: "form-control" %>
+		</p>
+
+		<p>
+			<%= f.label :publisher %><br>
+			<%= f.text_field :publisher, class: "form-control" %>
+		</p>
+
+		<p>
+			<%= f.label :description %><br>
+			<%= f.text_field :description, class: "form-control" %>
+		</p>
+
+		<p>
+			<%= f.label :tags %><br>
+			<%= f.text_field :tags, class: "form-control" %>
+		</p>
+
+		<p>
+			<%= f.submit class: "btn btn-primary" %>
+		</p>
+	</div>
+<% end %>
