@@ -19,7 +19,7 @@
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group", id="form-search">
           <%= form_tag(syrianotes_path, :method => "get", class: "navbar-form navbar-right") do %>
-            <%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
+            <em><%= text_field_tag :search, params[:search], placeholder: "Search Notes...", class: "form-control" %></em>
             <%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
           <% end %>
         </div>

@@ -13,7 +13,8 @@
 					<strong>Publisher:</strong><br><%= syrianote.publisher %><br>
 					<strong>Description:</strong><br><%= syrianote.description %><br>
 					<strong>Tags:</strong><br><%= syrianote.tags %><br><br>
-					<%= link_to 'View Note', syrianote_path(syrianote), class: "btn-sm btn-primary" %>
+					|<%= link_to 'View Note', syrianote_path(syrianote), class: "btn-sm btn-primary" %>|
+					|<%= link_to 'Edit Note', edit_syrianote_path(syrianote), class: "btn-sm btn-warning" %>|
 				</div>		
 			</div>
 		</div>

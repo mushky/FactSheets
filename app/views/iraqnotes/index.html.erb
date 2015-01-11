@@ -13,8 +13,10 @@
 					<strong>URL:</strong><br><a href="<%= iraqnote.url %>">LINK TO ARTICLE</a><br>
 					<strong>Publisher:<br></strong><%= iraqnote.publisher %><br>
 					<strong>Description:<br></strong><%= iraqnote.description %><br>
-					<strong>Tags:</strong><br><%= iraqnote.tags %><br><br>
-					<%= link_to 'View Note', iraqnote_path(iraqnote), class: 'btn-sm btn-primary' %>
+					<strong>Tags:</strong><br><%= iraqnote.tags %><br>
+					|<%= link_to 'View Note', iraqnote_path(iraqnote), class: 'btn-sm btn-primary' %>|
+					|<%= link_to 'Edit Note', edit_iraqnote_path(iraqnote), class: "btn-sm btn-warning" %>|
+
 				</div>
 			</div>
 		</div>
