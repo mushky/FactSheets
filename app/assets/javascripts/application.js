@@ -15,3 +15,18 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+// Following code is used to remove submit button from search bar
+
+$(function() {
+    $('form').each(function() {
+        $(this).find('input').keypress(function(e) {
+            // Enter pressed?
+            if(e.which == 10 || e.which == 13) {
+                this.form.submit();
+            }
+        });
+        $('form').find('input[type=submit]').hide();
+
+    });
+});
