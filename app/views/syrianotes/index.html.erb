@@ -1,11 +1,10 @@
-<div class="container">
+<div class="container-fluid">
 	<%= link_to "New Post", new_syrianote_path, class: 'btn btn-primary' %><br>
 	<%= will_paginate @syrianote %>
 </div>
-<div class="container">
 	<% @syrianotes.each do |syrianote| %>
 		<div class="jumbotron">
-			<div class="container">
+			<div class="container-fluid">
 				<div id="note">
 					<strong>Category:</strong><br><%= syrianote.category %><br>
 					<strong>Title:</strong><br><%= syrianote.title %><br>
@@ -14,7 +13,6 @@
 					<strong>Description:</strong><br><%= syrianote.description %><br>
 					<strong>Tags:</strong><br><%= syrianote.tags %><br><br>
 					|<%= link_to 'View Note', syrianote_path(syrianote), class: "btn-sm btn-primary" %>|
-					|<%= link_to 'Edit Note', edit_syrianote_path(syrianote), class: "btn-sm btn-warning" %>|
 				</div>		
 			</div>
 		</div>
