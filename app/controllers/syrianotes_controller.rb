@@ -1,4 +1,4 @@
-class SyrianotesController < ApplicationController
+class SyrianotesController < ApplicationController 
   before_action :authenticate_user!, except: [:index, :show] 
   
   def index
