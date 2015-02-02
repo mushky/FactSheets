@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
 	<%= link_to 'New Post', new_iraqnote_path, class: "btn btn-primary" %>
 	<%= will_paginate @iraqnote %>
 </div>
@@ -15,8 +15,6 @@
 					<strong>Description:<br></strong><%= iraqnote.description %><br>
 					<strong>Tags:</strong><br><%= iraqnote.tags %><br>
 					|<%= link_to 'View Note', iraqnote_path(iraqnote), class: 'btn-sm btn-primary' %>|
-					|<%= link_to 'Edit Note', edit_iraqnote_path(iraqnote), class: "btn-sm btn-warning" %>|
-
 				</div>
 			</div>
 		</div>
