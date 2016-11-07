@@ -24,12 +24,7 @@
           <% end %>
         </div>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-      <% if user_signed_in? %> 
-      <li><%= link_to 'Sign out', destroy_user_session_path, class: "btn btn-danger navbar-btn", id: "login-button",method: :delete %></li>
-      <% else current_user %>
-      <li><%= link_to 'Sign in', new_user_session_path, class: "btn btn-info navbar-btn", id: "login-button" %></li>
-      <% end %>
+
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
