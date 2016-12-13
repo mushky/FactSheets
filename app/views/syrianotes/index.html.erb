@@ -2,6 +2,7 @@
 	<%= will_paginate @syrianote %>
 	<% @syrianotes.each do |syrianote| %>
 		<div id="note">
+			<hr>
 			<strong>Category:</strong><br><%= syrianote.category %><br>
 			<strong>Title:</strong><br><%= syrianote.title %><br>
 			<strong>URL:<br><a href="<%= syrianote.url %>">LINK TO ARTICLE</a></strong><br>
