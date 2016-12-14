@@ -7,7 +7,8 @@
 			<strong id="titles">Title:</strong><br><%= syrianote.title %><br>
 			<strong id="titles">URL:<br><a href="<%= syrianote.url %>">LINK TO ARTICLE</a></strong><br>
 			<strong id="titles">Publisher:</strong><br><%= syrianote.publisher %><br>
-			<strong id="titles">Description:</strong><br><%= markdown(syrianote.description) %><br>
+			<strong id="titles">Description:</strong><br><%= markdown(truncate(syrianote.description, length: 100))%><br>
+			<%= link_to "Continue Reading..." %><br>
 			<strong id="titles">Tags:</strong><br><%= syrianote.tags %><br><br>
 			|<%= link_to 'View Note', syrianote_path(syrianote), class: "btn-sm btn-primary" %>|
 		</div>
