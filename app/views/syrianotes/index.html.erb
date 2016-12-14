@@ -4,7 +4,7 @@
 		<div id="note">
 			<hr>
 			<!--<strong id="titles">Category:</strong><br><%= syrianote.category %><br>-->
-			<strong id="titles">Title:</strong><br><%= syrianote.title %><br>
+			<h3><%= syrianote.title %></h3>
 			<strong id="titles">URL:<br><a href="<%= syrianote.url %>">LINK TO ARTICLE</a></strong><br>
 			<strong id="titles">Publisher:</strong><br><%= syrianote.publisher %><br>
 			<strong id="titles">Description:</strong><br><%= markdown(truncate(syrianote.description, length: 500))%>
