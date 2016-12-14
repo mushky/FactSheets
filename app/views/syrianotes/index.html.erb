@@ -10,7 +10,7 @@
 			<strong id="titles">Description:</strong><br><%= markdown(truncate(syrianote.description, length: 500))%>
 			<%= link_to "Continue Reading...", syrianote_path(syrianote) %><br>
 			<!--<strong id="titles">Tags:</strong><br><%= syrianote.tags %><br><br>-->
-			|<%= link_to 'View Note', syrianote_path(syrianote), class: "btn-sm btn-primary" %>|
+			<%= link_to 'View Note', syrianote_path(syrianote), class: "btn-sm btn-primary" %>
 		</div>
 	<% end %>
 	<%= will_paginate @syrianote %>
