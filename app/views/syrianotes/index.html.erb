@@ -5,7 +5,7 @@
 			<hr>
 			<!--<strong id="titles">Category:</strong><br><%= syrianote.category %><br>-->
 			<h3><%= syrianote.title %></h3>
-			<strong id="titles">URL:<br><a href="<%= syrianote.url %>">LINK TO ARTICLE</a></strong><br>
+			<strong id="titles"><a href="<%= syrianote.url %>">LINK TO ARTICLE</a></strong><br>
 			<strong id="titles">Publisher:</strong><br><%= syrianote.publisher %><br>
 			<strong id="titles">Description:</strong><br><%= markdown(truncate(syrianote.description, length: 500))%>
 			<%= link_to "Continue Reading...", syrianote_path(syrianote) %><br>
