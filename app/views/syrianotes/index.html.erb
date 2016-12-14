@@ -3,13 +3,13 @@
 	<% @syrianotes.each do |syrianote| %>
 		<div id="note">
 			<hr>
-			<strong id="titles">Category:</strong><br><%= syrianote.category %><br>
+			<!--<strong id="titles">Category:</strong><br><%= syrianote.category %><br>-->
 			<strong id="titles">Title:</strong><br><%= syrianote.title %><br>
 			<strong id="titles">URL:<br><a href="<%= syrianote.url %>">LINK TO ARTICLE</a></strong><br>
 			<strong id="titles">Publisher:</strong><br><%= syrianote.publisher %><br>
 			<strong id="titles">Description:</strong><br><%= markdown(truncate(syrianote.description, length: 500))%>
 			<%= link_to "Continue Reading...", syrianote_path(syrianote) %><br>
-			<strong id="titles">Tags:</strong><br><%= syrianote.tags %><br><br>
+			<!--<strong id="titles">Tags:</strong><br><%= syrianote.tags %><br><br>-->
 			|<%= link_to 'View Note', syrianote_path(syrianote), class: "btn-sm btn-primary" %>|
 		</div>
 	<% end %>
