@@ -1,18 +1,44 @@
 <div class="container">
 	<%= will_paginate @syrianote %>
+	<h1>Notes</h1>
 	<% @syrianotes.each do |syrianote| %>
+	<table class="table table-bordered table-striped">
+	  <colgroup>
+	    <col class="col-md-2">
+	    <col class="col-md-7">
+	  </colgroup>
+	  <tbody>
 		<div id="note">
 			<hr>
-			<strong id="titles">Category:</strong><br><%= syrianote.category %><br>
-			<strong id="titles">Title:</strong><br><%= syrianote.title %><br>
-			<strong id="titles">URL:<br><a href="<%= syrianote.url %>">LINK TO ARTICLE</a></strong><br>
-			<strong id="titles">Publisher:</strong><br><%= syrianote.publisher %><br>
-			<strong id="titles">Description:</strong><br><%= markdown(truncate(syrianote.description, length: 500))%>
-			<%= link_to "Continue Reading...", syrianote_path(syrianote) %><br>
-			<strong id="titles">Tags:</strong><br><%= syrianote.tags %><br><br>
-			|<%= link_to 'View Note', syrianote_path(syrianote), class: "btn-sm btn-primary" %>|
+			<tr>
+			  <td><strong>Category:</strong></td>
+			  <td><%= syrianote.category %></td>
+			</tr>
+			<tr>
+			  <td><strong>Title:</strong></td>
+			  <td><%= syrianote.title %></td>
+			</tr>
+			<tr>
+			  <td><strong>URL:</td>
+			  <td><strong><a href="<%= syrianote.url %>">LINK TO ARTICLE</a></strong></td>
+			</tr>
+			<tr>
+			<tr>
+			  <td><strong>Publisher:</strong></td>
+			  <td><%= syrianote.publisher %></td>
+		  </tr>
+			<tr>
+			  <td><strong>Description:</strong></td>
+			  <td><%= markdown(truncate(syrianote.description, length: 500))%>
+			  <%= link_to "Continue Reading...", syrianote_path(syrianote) %></td>
+		  </tr>
+			<tr>
+			  <td><strong>Tags:</strong></td>
+			  <td><%= syrianote.tags %></td>
+			</tr>
+			<td><%= link_to 'View Note', syrianote_path(syrianote), class: "btn-sm btn-primary" %></td>
+
 		</div>
 	<% end %>
 	<%= will_paginate @syrianote %>
 </div>
-
