@@ -10,7 +10,7 @@ module ApplicationHelper
 	  coderayified = CodeRayify.new(:filter_html => true, 
 	                                :hard_wrap => true)
 	  options = {
-	    :fenced_code_blocks => true,
+	    :fenced_code_blocks => false,
 	    :no_intra_emphasis => true,
 	    :autolink => true,
 	    :lax_html_blocks => true,
