@@ -20,6 +20,5 @@ module ApplicationHelper
 	  markdown_to_html.render(text).html_safe
 	end
 
-  markdown(code)
 
 end
