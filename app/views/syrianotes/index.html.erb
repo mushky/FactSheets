@@ -10,7 +10,7 @@
 				<h3><%= syrianote.title %></h3>
 			<% end %>
 			<strong id="titles"><a href="<%= syrianote.url %>">LINK TO ARTICLE</a></strong> <br>
-			<strong id="titles">Publisher:</strong><%= syrianote.publisher %><br>
+			<strong id="titles">Publisher: </strong><%= syrianote.publisher %><br>
 			<strong id="titles">Description:</strong><br><%= markdown(truncate(syrianote.description, length: 500))%>
 			<%= link_to "Continue Reading...", syrianote_path(syrianote) %><br>
 		</div>
