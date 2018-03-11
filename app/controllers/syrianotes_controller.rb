@@ -52,6 +52,6 @@ class SyrianotesController < ApplicationController
 
   private
     def syrianote_params
-      params.require(:syrianote).permit(:category, :title, :url, :publisher, :description, :tags)
+      params.require(:syrianote).permit(:category, :title, :url, :publisher, :description, :tags, :commentary)
     end
 end
