@@ -16,16 +16,6 @@
           <li><%= link_to "Syria", syrianotes_path, class: "active" %></li>
           <li><%#= link_to "Iraq", iraqnotes_path, class: "active" %></li>
         </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group", id="form-search">
-          <%= form_tag(syrianotes_path, :method => "get", class: "navbar-form navbar-right") do %>
-            <em><%= text_field_tag :search, params[:search], placeholder: "Search Notes...", class: "form-control" %></em>
-            <%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
-          <% end %>
-        </div>
-      </form>
-
-        </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>

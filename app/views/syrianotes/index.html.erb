@@ -1,4 +1,9 @@
 <div class="container">
+  <div class="pull-right" style="margin-right: 10px">
+    <%= search_form_for @q, html: { class: "form-inline" } do |f| %>
+      <%= f.search_field :description_or_title_or_tags_cont, placeholder: "Search...", class: "form-control" %>
+    <% end %>
+	</div>
 	<%= will_paginate @syrianote %>
 	<h4><em>Each Note is either a passage from an article or commentary about an article pertaining to Syria news coverage</em></h4>
 	<% @syrianotes.each do |syrianote| %>

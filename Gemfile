@@ -16,6 +16,7 @@ gem 'spring',           group: :development
 gem 'devise'
 gem 'redcarpet'
 gem 'coderay'
+gem 'ransack'
 
 group :production do
   gem 'pg'
